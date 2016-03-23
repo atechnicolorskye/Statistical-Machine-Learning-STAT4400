@@ -1,0 +1,22 @@
+% --- Identification part ---
+%\ProvidesPackage{W4400}
+
+% --- Declaration of options ---
+\DeclareOption{english}{%
+  \PassOptionsToPackage{english}{babel}
+  %PersonName{} Your name
+  %\PersonAdresse{} Your UNI
+  \PersonName{Si Kai Lee}
+  \PersonAdresse{sl3950}
+  \CoursePage{https://courseworks.columbia.edu}
+
+  \Kurstitel{Statistical Machine Learning (W4400)}
+  \Semester{Spring 2016}
+}
+
+% --- Execution of options ---
+\ExecuteOptions{english}   % set default
+\ProcessOptions
+
+% --- Package loading
+\RequirePackage{babel}

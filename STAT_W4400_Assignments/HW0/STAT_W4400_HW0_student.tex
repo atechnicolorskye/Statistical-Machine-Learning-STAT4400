@@ -1,0 +1,209 @@
+\documentclass[]{../util/ColumbiaAssm}
+\usepackage{../util/W4400Student}
+     
+%%%% FOR EXAM PACKAGE
+\printanswers % If you don't want to print answers
+\addpoints % if you want to count the points
+% \noaddpoints % if you don't want to count the points
+% Specifies the way question are displayed:
+%\qformat{\textbf{Question \thequestion}\quad(\thepoints)\hfill}
+%\qformat{Question \thequestion:\hfill }
+\usepackage{color} % defines a new color
+\definecolor{SolutionColor}{rgb}{0.1,0.1,0.1} % light blue
+%\shadedsolutions % defines the style of the solution environment
+\framedsolutions % defines the style of the solution environment
+% Defines the title of the solution environment:
+\renewcommand{\solutiontitle}{\noindent\emph{Solution:~~~}\noindent}
+
+
+\usepackage[margin=1in]{geometry}
+\usepackage[pdftex]{graphicx}
+\usepackage{multirow}
+\usepackage{setspace}
+\usepackage{longtable}
+\usepackage{pifont}
+\usepackage{amsmath, enumerate, amssymb}
+\pagestyle{plain}
+
+\newcommand{\reals}{I\!\!R} %real numbers
+
+          
+%\usepackage{Sweave}
+\begin{document}
+%\input{STAT_W4400_HW0_studentR-concordance} 
+
+\makeAssmHeader{0}{Due: Tuesday 02 February 2016}
+\vspace{-2cm}
+
+\AddSubmissionRules
+
+  \input{../util/ml-defs.tex}
+
+\subsection*{Preamble}
+
+Prerequisites for this course include a previous course in statistics, elementary probability, multivariate calculus, linear algebra.  This homework is designed to allow you to test your background and your ability to adhere to the above submission instructions. All questions have been designed to be solved without any numerical aid -- if you are using a computer (which you are welcome to do), you may be missing the didactic purpose.   
+
+
+\subsection*{Submission (50 points)}  Submit your homework according to the above instructions.  Attention to detail is an essential part of machine learning and the logistics of this course, and penalties for not adhering to the submission instructions will be severe on all homeworks.
+
+\subsection*{Questions (50 points)}
+
+In all of the below questions, let:
+
+\begin{equation}
+A = \begin{bmatrix}  1 & 2 \\ 2 & 4 \end{bmatrix}, ~~~~~ B =   \begin{bmatrix}  1 & 2 \\ 3 & 4 \end{bmatrix}, ~~~~~~\textrm{and}~~~~~~ x = \begin{bmatrix}  2 \\ 1 \end{bmatrix}. \nonumber
+\end{equation}
+
+
+\begin{questions} % Begins the questions environment
+
+\question[2] What is $B_{2,1}$? % Introduces a new question which is worth 2 points
+\begin{solution}
+...your solution here...
+\end{solution}
+
+\question[2] What is $A + B$?
+\begin{solution}
+...your solution here...
+\end{solution}
+
+\question[2] What is $ AB $ ?
+\begin{solution}
+...your solution here...
+\end{solution}
+
+\question[2] What is $rank(A)$?
+\begin{solution}
+...your solution here...
+\end{solution}
+
+\question[2] What is the largest eigenvalue of $A$?
+\begin{solution}
+...your solution here...
+\end{solution}
+
+\question[2] What is the eigenvector associated with that largest eigenvalue of $A$?
+\begin{solution}
+...your solution here...
+\end{solution}
+
+\question[2] What is $|B|$ (determinant of $B$)?
+\begin{solution}
+...your solution here...
+\end{solution}
+
+\question[2] What is $x^\top A x$?
+\begin{solution}
+...your solution here...
+\end{solution}
+
+\question[2] What is $x^\top x$?
+\begin{solution}
+...your solution here...
+\end{solution}
+
+\question[2] What is $xx^\top $?
+\begin{solution}
+...your solution here...
+\end{solution}
+
+\question[2] What is $||x||_2$ (the Euclidean norm of $x$)?
+\begin{solution}
+...your solution here...
+\end{solution}
+
+\question[2] What is the gradient of $f(x) = x^\top A x$ w.r.t. $x$, namely $\nabla_x f(x)$?
+\begin{solution}
+...your solution here...
+\end{solution}
+
+\question[2] What is the Hessian of $f(x) = x^\top A x$ w.r.t. $x$, namely $\nabla^2_x f(x)$?
+\begin{solution}
+...your solution here...
+\end{solution}
+
+\question[2] We say $x \in \reals^n$.  What is $n$?
+\begin{solution}
+...your solution here...
+\end{solution}
+
+
+\question[2] I write $y \sim \mathcal{N}(\mu, \sigma^2)$ to denote a Gaussian random variable with mean $\mu$ and standard deviation $\sigma$.  What is $E(y^2)$?
+\begin{solution}
+...your solution here...
+\end{solution}
+
+\question[2] Say $y \sim \mathcal{N}(2.7, 8)$ and $w \sim \mathcal{N}(3.1, 15)$  are independent random variables.  What is the distribution of $y + w$?
+\begin{solution}
+...your solution here...
+\end{solution}
+
+\question[2] I write $\begin{bmatrix} w_1 \\ w_2 \end{bmatrix} \sim \mathcal{N}\left(  \begin{bmatrix} -3 \\ 2 \end{bmatrix}, \begin{bmatrix} 4 & \sqrt 3 \\ \sqrt 3 & 3 \end{bmatrix}\right)$ to denote a multivariate Gaussian random variable with dimension $n=2$, and mean vector $\mu$ and covariance matrix $\Sigma$ as specified.  What is the normalizing constant of this distribution?
+\begin{solution}
+...your solution here...
+\end{solution}
+
+\question[2] I write $z \sim Bern(p)$ to denote a Bernoulli random variable with bias $p$.  What is the support of $z$?
+\begin{solution}
+...your solution here...
+\end{solution}
+
+\question[2] I draw $n$ times independently from $z \sim Bern(p)$.  What is the distribution of the number of heads/successes $k$?
+\begin{solution}
+...your solution here...
+\end{solution}
+  
+\question[2] Find $x_1$ that maximizes $h(x_1) = \frac{1}{3}x_1^3 - \frac{1}{2}x_1^2 - 6x_1 + \frac{27}{2}$ subject to $x_1 \in [-4,4]$.
+\begin{solution}
+...your solution here...
+\end{solution}
+
+\question[2] Find the minimum value of $h(x_1)$ subject to the constraint that $x_1 \in [-4,4]$. 
+\begin{solution}
+...your solution here...
+\end{solution}
+
+\question[2] Let $\tilde{h}(x_1) = \frac{1}{Z}h(x_1)$; find $Z$ such that $\tilde{h}(x_1)$ has $\int_{0}^{1} \tilde{h}(x_1)dx_1  = 1$.
+\begin{solution}
+...your solution here...
+\end{solution}
+
+\question[2] Let $b(x) = x_1x_2^3$.  Find $\int_\mathcal{A} b(x) dx$ for $\mathcal{A} = [0,3]\times [0,2]$.
+\begin{solution}
+...your solution here...
+\end{solution}
+
+\question[2] Let $c(x) = x_1 + \sqrt{3}x_2$; find $x$ that maximizes $c(x)$ subject to $x_1^2 + x_2^2 = 1$.
+\begin{solution}
+...your solution here...
+\end{solution}
+
+\question[2] Let $g(x) = -x_1 \log x_1 - x_2 \log x_2$; find $x$ that maximizes $g(x)$ subject to  $x_1+x_2 = 1$.
+\begin{solution}
+...your solution here...
+\end{solution}
+
+
+\end{questions}
+
+\section*{Closing Remark}
+
+Linear algebra and optimization are huge and beautiful mathematical fields, and we will only skim the very surface.  That said, matrices, vectors, and common manipulations of these objects are the tools of the trade in data science, and thus a basic facility is crucial.  Regardless of your ease with the above questions, for linear algebra I recommend studying Zico Kolter's excellent and brief review (for a machine learning class): {\tt \footnotesize http://cs229.stanford.edu/section/cs229-linalg.pdf}.  For basic use of Lagrange multipliers, I recommend both of the following:
+
+{\tt \footnotesize www.cs.iastate.edu/\%7Ecs577/handouts/lagrange-multiplier.pdf?}.
+
+{\tt \footnotesize www.math.harvard.edu/archive/21a\%5Fspring\%5F09/PDF/11-08-Lagrange-Multipliers.pdf}
+
+If you feel drastically behind on all these subjects, I strongly recommend serious self-study, including something like the first 16 lectures of: 
+ 
+{\tt \footnotesize http://ocw.mit.edu/courses/mathematics/18-02-multivariable-calculus-fall-2007/index.htm }.
+
+Or perhaps the entirety of:  {\tt \footnotesize http://projects.iq.harvard.edu/stat110 }.
+
+Successful completion of this course without much of the above background will be challenging, though not impossible.
+
+
+As a grading rubric, if you have no trouble answering 60-100\% of these questions, you are in the right class.  If you are able to correctly answer 40-60\% of the questions, you will be successful as long as you continue to work to refresh these concepts.  If you score well below 40\%, you will struggle in this course; you may want to reconsider taking this course without developing more background.     These concepts will be reviewed in brief meaningful detail, but they are the necessary toolkit to begin this material, and thus familiarity is expected.  
+
+
+\end{document}
